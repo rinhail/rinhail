@@ -18,7 +18,8 @@ body {
 	line-height: 1.65;
 	font-family: $default-font;
 	overflow-x: hidden;
-	color: $text;
+  background-color: #1f2227;
+  color: #CCC;
 	input, textarea {
 		border: #666 1px solid;
 		outline: none;
@@ -48,6 +49,61 @@ b, strong {
 	font-weight: bold;
 }
 
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
 
+.info {
+  margin-left: 20px;
+  order: 2;
+  
+  &-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  &-row-col {
+    width: 70px;
+  }
+  
+  #hp-output {
+    color: red;
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
+  
+  #enemies-output {
+    color: green;
+  }
+}
 
-@import "media"; // Always at the end
+.map {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  
+  &-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  &-cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid grey;
+    
+    &.current {
+      background-color: gold;
+    }
+    
+    &.enemy {
+      background-color: red;
+    }
+    
+    &.heal {
+      background-color: lime;
+    }
+  }
+}
